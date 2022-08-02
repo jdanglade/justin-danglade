@@ -1,16 +1,29 @@
 {
   "files": {
-    "main.css": "/justin-danglade/static/css/main.073c9b0a.css",
-    "main.js": "/justin-danglade/static/js/main.cef721ec.js",
-    "static/js/787.b04d3dfa.chunk.js": "/justin-danglade/static/js/787.b04d3dfa.chunk.js",
-    "static/media/logo.svg": "/justin-danglade/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/justin-danglade/static/css/main.85b3d6aa.css",
+    "main.js": "/justin-danglade/static/js/main.65b6cf9f.js",
+    "static/media/Drama.webp": "/justin-danglade/static/media/Drama.f91d67a4ec3d1d2de43b.webp",
+    "static/media/TakeOfTheCity.webp": "/justin-danglade/static/media/TakeOfTheCity.088246d508251fefe37a.webp",
+    "static/media/BusyMom.webp": "/justin-danglade/static/media/BusyMom.ef3a3dfcc736b020adbf.webp",
+    "static/media/StillDay.webp": "/justin-danglade/static/media/StillDay.442d00329deae8b46e02.webp",
+    "static/media/SleepyWaterChicken.webp": "/justin-danglade/static/media/SleepyWaterChicken.342c27b1a9e0a8d21d50.webp",
+    "static/media/ISeeYou.webp": "/justin-danglade/static/media/ISeeYou.0bd68c13700c6a4ce8ea.webp",
+    "static/media/NotFinished.webp": "/justin-danglade/static/media/NotFinished.d3c365771befce74e0d7.webp",
+    "static/media/ElectricBoogie.webp": "/justin-danglade/static/media/ElectricBoogie.1a5d9caae2dd4ce2b2b4.webp",
+    "static/media/PickupTruck.webp": "/justin-danglade/static/media/PickupTruck.e8318ad550e446e5ae90.webp",
+    "static/media/HandsomeGuy.webp": "/justin-danglade/static/media/HandsomeGuy.8a6e5f21e3a9981ccceb.webp",
+    "static/media/TriniCrescentBeach.webp": "/justin-danglade/static/media/TriniCrescentBeach.74c025044c4707f8e5d8.webp",
+    "static/media/ParkTreeVignette.webp": "/justin-danglade/static/media/ParkTreeVignette.6213e815ae6681e5716c.webp",
+    "static/media/SpeedOfLight.webp": "/justin-danglade/static/media/SpeedOfLight.8de2a4236c03261ab65e.webp",
+    "static/media/ChristmasLights.webp": "/justin-danglade/static/media/ChristmasLights.24f80ff4c5bc872a128b.webp",
+    "static/media/MiamiSundown.webp": "/justin-danglade/static/media/MiamiSundown.3934ed07235a3636d65a.webp",
+    "static/media/RedPalmTree.webp": "/justin-danglade/static/media/RedPalmTree.78c62ea5b6a0e9cdf5fd.webp",
     "index.html": "/justin-danglade/index.html",
-    "main.073c9b0a.css.map": "/justin-danglade/static/css/main.073c9b0a.css.map",
-    "main.cef721ec.js.map": "/justin-danglade/static/js/main.cef721ec.js.map",
-    "787.b04d3dfa.chunk.js.map": "/justin-danglade/static/js/787.b04d3dfa.chunk.js.map"
+    "main.85b3d6aa.css.map": "/justin-danglade/static/css/main.85b3d6aa.css.map",
+    "main.65b6cf9f.js.map": "/justin-danglade/static/js/main.65b6cf9f.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.cef721ec.js"
+    "static/css/main.85b3d6aa.css",
+    "static/js/main.65b6cf9f.js"
   ]
 }
