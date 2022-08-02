@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/justin-danglade/static/css/main.85b3d6aa.css",
-    "main.js": "/justin-danglade/static/js/main.65b6cf9f.js",
+    "main.js": "/justin-danglade/static/js/main.03725afd.js",
     "static/media/Drama.webp": "/justin-danglade/static/media/Drama.f91d67a4ec3d1d2de43b.webp",
     "static/media/TakeOfTheCity.webp": "/justin-danglade/static/media/TakeOfTheCity.088246d508251fefe37a.webp",
     "static/media/BusyMom.webp": "/justin-danglade/static/media/BusyMom.ef3a3dfcc736b020adbf.webp",
@@ -20,10 +20,10 @@
     "static/media/RedPalmTree.webp": "/justin-danglade/static/media/RedPalmTree.78c62ea5b6a0e9cdf5fd.webp",
     "index.html": "/justin-danglade/index.html",
     "main.85b3d6aa.css.map": "/justin-danglade/static/css/main.85b3d6aa.css.map",
-    "main.65b6cf9f.js.map": "/justin-danglade/static/js/main.65b6cf9f.js.map"
+    "main.03725afd.js.map": "/justin-danglade/static/js/main.03725afd.js.map"
   },
   "entrypoints": [
     "static/css/main.85b3d6aa.css",
-    "static/js/main.65b6cf9f.js"
+    "static/js/main.03725afd.js"
   ]
 }
