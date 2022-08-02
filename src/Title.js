@@ -38,9 +38,6 @@ const Title = () => {
 
 const TextContainer = styled.div`
   display: flex;
-  background-color: transparent;
-  border: none;
-  border-radius: 15px;
   box-sizing: border-box;
   color: #504a4e;
   font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,

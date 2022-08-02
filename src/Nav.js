@@ -48,10 +48,11 @@ const LinksContainer = styled.div`
   position: sticky;
   flex-direction: row;
   justify-content: flex-start;
+  padding: 0px 10px 0px 10px;
 `;
 
 const TitleContainer = styled.div`
-  padding: 10px;
+  padding: 0px 10px 0px 10px;
   position: sticky;
 `;
 
