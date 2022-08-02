@@ -4,10 +4,10 @@ import Title from "./Title";
 import styled from "styled-components";
 
 const navLinks = [
-  createTuple("Home", "/"),
-  createTuple("Resume", "Res"),
-  createTuple("Photography", "Photos"),
-  createTuple("Github", "GithubAccount"),
+  createTuple("Home", "/justin-danglade"),
+  createTuple("Resume", "/justin-danglade/Res"),
+  createTuple("Photography", "/justin-danglade/Photos"),
+  createTuple("Github", "/justin-danglade/GithubAccount"),
 ];
 
 const Nav = () => {
