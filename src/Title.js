@@ -4,6 +4,9 @@ import styled from "styled-components";
 
 const getTitle = (path) => {
   switch (path) {
+    case "/": {
+      return "Home";
+    }
     case "/justin-danglade": {
       return "Home";
     }
@@ -19,7 +22,7 @@ const getTitle = (path) => {
       return "Github";
     }
     default:
-      return "";
+      return "Home";
   }
 };
 

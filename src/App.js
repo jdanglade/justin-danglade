@@ -20,6 +20,7 @@ function App() {
         <body>
           {nav}
           <Routes>
+            <Route exact path="/" element={home} />
             <Route path="/justin-danglade" element={home} />
             <Route path="/Res" element={resume} />
             <Route path="/Photos" element={photos} />

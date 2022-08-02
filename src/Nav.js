@@ -4,7 +4,7 @@ import Title from "./Title";
 import styled from "styled-components";
 
 const navLinks = [
-  createTuple("Home", "/justin-danglade"),
+  createTuple("Home", "/"),
   createTuple("Resume", "Res"),
   createTuple("Photography", "Photos"),
   createTuple("Github", "GithubAccount"),
