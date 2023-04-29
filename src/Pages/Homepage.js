@@ -1,16 +1,20 @@
 import React from "react";
 import styled from "styled-components";
+import NavigationBar from "../Components/NavigationBar";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { HomepageData } from "../Assets/data";
 
 const Homepage = () => {
   return (
-    <HomepageContainer className="homepage-container">
-      <Introduction />
-      <EducationContainer className="homepage-schools">
-        <DisplaySchools />
-      </EducationContainer>
-    </HomepageContainer>
+    <>
+      <NavigationBar />
+      <HomepageContainer className="homepage-container">
+        <Introduction />
+        <EducationContainer className="homepage-schools">
+          <DisplaySchools />
+        </EducationContainer>
+      </HomepageContainer>
+    </>
   );
 };
 

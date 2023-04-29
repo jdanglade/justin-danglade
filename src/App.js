@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <Router basename="">
-        <NavigationBar />
+        
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/Resume" element={<Resume />} />

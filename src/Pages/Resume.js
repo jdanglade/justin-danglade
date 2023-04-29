@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import { ResumeData } from "../Assets/data";
-import { LinkButton } from "../Components/NavigationBar";
+import NavigationBar, { LinkButton } from "../Components/NavigationBar";
 
 const Resume = () => {
   return (
     <>
+      <NavigationBar />
       <ResumeContainer className="resume-container resume container">
         <ResHeader className="resume-header resume" />
         <ResBody className="resume-body resume" resumeData={ResumeData} />
