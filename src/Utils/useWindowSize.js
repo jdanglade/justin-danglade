@@ -12,8 +12,6 @@ import { Devices } from "../Assets/data";
 export default function useWindowSize() {
   const isSSR = typeof window !== "undefined";
 
-  const isWideScreen1 = () => window.innerWidth >= parseInt(Devices.tablet);
-
   const [windowSize, setWindowSize] = React.useState({
     width: isSSR ? 1200 : window.innerWidth,
     height: isSSR ? 800 : window.innerHeight,
