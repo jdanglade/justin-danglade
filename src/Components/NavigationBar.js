@@ -79,7 +79,6 @@ const NavigationContainer = styled.div`
   left: 0;
   padding: 2vmax;
   color: #ffffff;
-  border: 3px solid red;
 `;
 
 const NavigationTitle = styled.h2`
