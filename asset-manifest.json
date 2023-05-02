@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/justin-danglade/static/css/main.5251ab38.css",
-    "main.js": "/justin-danglade/static/js/main.f3f0deea.js",
+    "main.js": "/justin-danglade/static/js/main.006ba0e2.js",
     "index.html": "/justin-danglade/index.html",
     "main.5251ab38.css.map": "/justin-danglade/static/css/main.5251ab38.css.map",
-    "main.f3f0deea.js.map": "/justin-danglade/static/js/main.f3f0deea.js.map"
+    "main.006ba0e2.js.map": "/justin-danglade/static/js/main.006ba0e2.js.map"
   },
   "entrypoints": [
     "static/css/main.5251ab38.css",
-    "static/js/main.f3f0deea.js"
+    "static/js/main.006ba0e2.js"
   ]
 }
