@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import NavigationBar from "../Components/NavigationBar";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { HomepageData } from "../Assets/data";
+import useWindowSize from "../Utils/useWindowSize";
 
 const Homepage = () => {
+  const isWideScreen = useWindowSize().isWideScreen;
+  const [isDropDownExpanded, setIsDropDownExpanded] = useState(false);
+
   return (
     <>
       <NavigationBar />

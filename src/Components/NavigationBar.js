@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Link, useLocation } from "react-router-dom";
-import { NavLinks } from "../Assets/data";
+import { NavigationLinks } from "../Assets/data";
 import useWindowSize from "../Utils/useWindowSize";
 
 const NavigationBar = () => {
@@ -21,32 +21,78 @@ const NavigationMapper = (props) => {
 };
 
 const DropDown = () => {
-  const [isExpanded, setIsExpanded] = useState(true);
-  return <LinkButton>{isExpanded ? "Not it" : <GetTitle />}</LinkButton>;
-  // NavLinks.map((link) => {
-  //   return link.Title;
+  const [isExpanded, setIsExpanded] = useState(false);
+  return isExpanded ? (
+    drop()
+  ) : (
+    <LinkButton onClick={() => setIsExpanded(true)}>
+      <GetTitleLink />
+    </LinkButton>
+  );
+
+  function drop() {
+    return (
+      <DropDownContainer>
+        {NavigationLinks.map((link, index) => {
+          return (
+            <>
+              <DropDownButton key={`button-${index}-${link.Title}`}>
+                {link.LinkType === "anchor" ? (
+                  <PathAnchor
+                    key={`anchor-${link.Title}`}
+                    className="nav-link anchor"
+                    href={link.Path}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {link.Title}
+                  </PathAnchor>
+                ) : (
+                  <PathLink
+                    key={`link-${index}-${link.Title}`}
+                    className="nav-link link"
+                    to={link.Path}
+                  >
+                    {link.Title}
+                  </PathLink>
+                )}
+              </DropDownButton>
+            </>
+          );
+        })}
+      </DropDownContainer>
+    );
+  }
 };
 
-const GetTitle = () => {
+const GetTitleLink = () => {
   const currentLocation = useLocation().pathname;
-  for (let i = 0; i < NavLinks.length; i++) {
-    if (NavLinks[i].Path === currentLocation) {
-      return (
-        <PathLink
-          key={`link-${i}-${NavLinks[i].Title}`}
-          className="nav-link link title-link"
-          to={NavLinks[i].Path}
-        >
-          {NavLinks[i].Title}
-        </PathLink>
-      );
+  let Title = getTitle();
+  return (
+    <PathLink
+      key={`link-${Title.index}-${Title.Title}`}
+      className="nav-link link title-link"
+      to={Title.Link.Path}
+    >
+      {Title.Title}
+    </PathLink>
+  );
+
+  function getTitle() {
+    for (let i = 0; i < NavigationLinks.length; i++) {
+      if (NavigationLinks[i].Path === currentLocation) {
+        return {
+          Title: NavigationLinks[i].Title,
+          index: i,
+          Link: NavigationLinks[i],
+        };
+      }
     }
   }
-  return "N/A";
 };
 
 const CreateLinkButtons = () => {
-  return NavLinks.map((link, index) => (
+  return NavigationLinks.map((link, index) => (
     <LinkButton key={`button-${index}-${link.Title}`}>
       {link.LinkType === "anchor" ? (
         <PathAnchor
@@ -100,8 +146,51 @@ const PathAnchor = styled.a`
   padding: 2vmax;
 `;
 
+export const DropDownContainer = styled.div``;
+
 export const LinkButton = styled.button`
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 600;
+  line-height: normal;
+  border: none;
+  color: #ffffff;
+  background-color: transparent;
+  box-sizing: border-box;
+  cursor: pointer;
+  min-height: 1rem;
+  min-width: 1rem;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+  font-size: 2vmax;
+
+  &:disabled {
+    pointer-events: none;
+  }
+
+  &:hover {
+    transform: translatey(-1vh);
+  }
+
+  &:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+`;
+
+export const DropDownButton = styled.button`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 600;

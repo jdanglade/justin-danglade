@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, createContext, useContext } from "react";
 import styled from "styled-components";
 import { ResumeData } from "../Assets/data";
 import NavigationBar, { LinkButton } from "../Components/NavigationBar";
@@ -8,14 +8,14 @@ const Resume = () => {
     <>
       <NavigationBar />
       <ResumeContainer className="resume-container resume container">
-        <ResHeader className="resume-header resume" />
-        <ResBody className="resume-body resume" resumeData={ResumeData} />
+        <ResumeHeader className="resume-header resume" />
+        <ResumeBody className="resume-body resume" resumeData={ResumeData} />
       </ResumeContainer>
     </>
   );
 };
 
-const ResHeader = () => {
+const ResumeHeader = () => {
   return (
     <>
       <ResumeHeaderContainer className="resume-header-container container">
@@ -26,10 +26,10 @@ const ResHeader = () => {
   );
 };
 
-const ResBody = () => {
+const ResumeBody = () => {
   return (
-    <ResBodyContainer className="resume-body-container container">
-      <Intro className="resume-intro" />
+    <ResumeBodyContainer className="resume-body-container container">
+      <Introduction className="resume-intro" />
       <Qualifications
         className="resume-qualifications"
         qualifications={ResumeData.Qualifications}
@@ -46,7 +46,7 @@ const ResBody = () => {
         className="resume-employmentHistory"
         employmentHistory={ResumeData.EmploymentHistory}
       />
-    </ResBodyContainer>
+    </ResumeBodyContainer>
   );
 };
 
@@ -76,7 +76,7 @@ const Contact = () => {
   );
 };
 
-const Intro = () => {
+const Introduction = () => {
   return (
     <IntroContainer className="introContainer container">
       <IntroText className="intro-text">{ResumeData.Intro.text}</IntroText>
@@ -102,25 +102,24 @@ const Qualifications = () => {
 };
 
 const Education = () => {
-  const degrees = ResumeData.Education.Degrees;
-  const gradDates = ResumeData.Education.GradDates;
-  const schools = ResumeData.Education.Schools;
+  const Education = ResumeData.Education;
+
   return (
     <EducationContainer className="education-container container">
       <Subtitle className="education-subtitle subtitle">Education</Subtitle>
-      {degrees.map((degree, index) => (
+      {Education.map((school, index) => (
         <div key={index} className={"degree-" + index}>
           <FacilityContainer
             key={index}
             className={"facility-container facility-" + index}
           >
-            <Degree className={"degree-" + index}>{degree}</Degree>
-            <School className={"school-" + index}>{schools[index]}</School>
+            <Degree className={"degree-" + index}>{school.Degree}</Degree>
+            <School className={"school-" + index}>{school.SchoolName}</School>
           </FacilityContainer>
           <GraduationDate
             className={"graduation-date graduation-" + (index + 1)}
           >
-            {gradDates[index]}
+            {school.GraduationDate}
           </GraduationDate>
         </div>
       ))}
@@ -129,14 +128,12 @@ const Education = () => {
 };
 
 const Experience = () => {
-  const experienceLinks = ResumeData.Experience.ExperienceLinks;
-  const experienceName = ResumeData.Experience.ExperienceNames;
-  const linkDescriptions = ResumeData.Experience.ExperienceText;
+  const Experiences = ResumeData.Experiences;
 
   return (
     <ExperienceContainer className="experience-container container">
       <Subtitle className="experience-subtitle subtitle">Experience</Subtitle>
-      {experienceLinks.map((experienceLink, index) => {
+      {Experiences.map((experience, index) => {
         return (
           <DescriptionContainer
             key={"experience-" + index}
@@ -146,7 +143,7 @@ const Experience = () => {
               <ExperienceLink
                 className="experience-link link"
                 key={"experienceLinks-" + index}
-                href={experienceLink}
+                href={experience.Link}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -154,12 +151,12 @@ const Experience = () => {
                   key={`experience-link-${index}`}
                   className="experience-link-button"
                 >
-                  {experienceName[index]}
+                  {experience.Name}
                 </LinkButton>
               </ExperienceLink>
 
               <DescriptionParagraph className="experience-description">
-                {linkDescriptions[index]}
+                {experience.Description}
               </DescriptionParagraph>
             </ExperienceLinkContaier>
           </DescriptionContainer>
@@ -204,7 +201,7 @@ const ResumeContainer = styled.div``;
 
 const ResumeHeaderContainer = styled.div``;
 
-const ResBodyContainer = styled.div`
+const ResumeBodyContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 10vmin 0 10vmin;

@@ -8,7 +8,7 @@ export const Devices = {
   desktop: "2560px",
 };
 
-export const NavLinks = [
+export const NavigationLinks = [
   { Title: "Home", Path: "/", LinkType: "link" },
   { Title: "Resume", Path: "/Resume", LinkType: "link" },
   { Title: "Photography", Path: "/Photos", LinkType: "link" },
@@ -72,25 +72,33 @@ export const ResumeData = {
     "Knowledge of both relational and document-based database technologies like MySQL and MongoDB.",
     "Deep technical understanding of lower-level languages like Java and C/C++.",
   ],
-  Education: {
-    Degrees: [
-      "Bachelor of Science in Computer Science ",
-      "Associate of Science in Computer Science",
-    ],
-    GradDates: ["May 2016 - Oct. 2020", "Jan. 2013 - Aug. 2015"],
-    Schools: ["Florida International University", "Miami-Dade College"],
-  },
-  Experience: {
-    ExperienceLinks: [
-      "https://jdanglade.github.io/justin-danglade/",
-      "https://clone-fa779.web.app",
-    ],
-    ExperienceNames: ["Personal Website", "Amazon-Clone"],
-    ExperienceText: [
-      "This single-page ReactJS application, a more personal look at me. A web application used just for the sake of letting the world know that I am capable. Hosted on Github Pages, I designed and developed this web application and never plan to stop this app from evolving.",
-      "A full stack application that mimics the ‘Amazon.com’ web site. The ‘Amazon-Clone’ web application uses React and Express, is hosted on and uses Authentication from Firebase, and makes use of the API provided by the payment processing company, Stripe.",
-    ],
-  },
+  Education: [
+    {
+      SchoolName: "Miami-Dade College",
+      Degree: "Associate of Science in Computer Science",
+      GraduationDate: "Jan. 2013 - Aug. 2015",
+    },
+    {
+      SchoolName: "Florida International University",
+      Degree: "Bachelor of Science in Computer Science ",
+      GraduationDate: "May 2016 - Oct. 2020",
+    },
+  ],
+  Experiences: [
+    {
+      Name: "Personal Website",
+      Link: "https://jdanglade.github.io/justin-danglade/",
+      Description:
+        "This single-page ReactJS application, a more personal look at me. A web application used just for the sake of letting the world know that I am capable. Hosted on Github Pages, I designed and developed this web application and never plan to stop this app from evolving.",
+    },
+    {
+      Name: "Amazon-Clone",
+      Link: "https://clone-fa779.web.app",
+      Description:
+        "A full stack application that mimics the ‘Amazon.com’ web site. The ‘Amazon-Clone’ web application uses React and Express, is hosted on and uses Authentication from Firebase, and makes use of the API provided by the payment processing company, Stripe.",
+    },
+  ],
+
   EmploymentHistory: {
     JobTitles: [
       "Consultation Agent - Geek Squad",
@@ -109,10 +117,21 @@ export const ResumeData = {
 
 export const PhotographyData = [
   {
+    name: "NotFinished",
+    cdnLocation:
+      "https://ucarecdn.com/434f5fb1-be12-4380-820c-d6b540bb7ae8/-/preview/-/quality/smart/",
+  },
+  {
     name: "Busy Mom",
     cdnLocation:
       "https://ucarecdn.com/40762298-90bd-49e8-902c-ff3a717211aa/-/preview/-/quality/smart/",
   },
+  {
+    name: "TriniCrescentBeach",
+    cdnLocation:
+      "https://ucarecdn.com/fd581c9d-e210-48bd-94ce-cf2bbf0ed5d7/-/preview/-/quality/smart/",
+  },
+
   {
     name: "ChristmasLights",
     cdnLocation:
@@ -143,11 +162,7 @@ export const PhotographyData = [
     cdnLocation:
       "https://ucarecdn.com/7c43761d-938e-44cb-aada-eda574f951b3/-/preview/-/quality/smart/",
   },
-  {
-    name: "NotFinished",
-    cdnLocation:
-      "https://ucarecdn.com/434f5fb1-be12-4380-820c-d6b540bb7ae8/-/preview/-/quality/smart/",
-  },
+
   {
     name: "ParkTreeVignette",
     cdnLocation:
@@ -182,10 +197,5 @@ export const PhotographyData = [
     name: "TakeOfTheCity",
     cdnLocation:
       "https://ucarecdn.com/85cdd04b-c882-4b97-b66e-25fee0f133e6/-/preview/-/quality/smart/",
-  },
-  {
-    name: "TriniCrescentBeach",
-    cdnLocation:
-      "https://ucarecdn.com/fd581c9d-e210-48bd-94ce-cf2bbf0ed5d7/-/preview/-/quality/smart/",
   },
 ];
