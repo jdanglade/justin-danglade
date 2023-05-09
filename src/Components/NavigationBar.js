@@ -4,43 +4,24 @@ import { Link, useLocation } from "react-router-dom";
 import { NavigationLinks } from "../Assets/data";
 import useWindowSize from "../Utils/useWindowSize";
 
+/* 
+    Returns a responsive navigation bar that condenses into a 
+    drop-down menu based on screen width.
+*/
 const NavigationBar = () => {
   const isWideScreen = useWindowSize().isWideScreen;
   const [isExpanded, setIsExpanded] = useState(false);
   const currentLocation = useLocation().pathname;
 
-  const GetLinkTitle = () => {
-    let Title = {};
-    for (let i = 0; i < NavigationLinks.length; i++) {
-      if (NavigationLinks[i].Path === currentLocation) {
-        Title = {
-          Title: NavigationLinks[i].Title,
-          index: i,
-          Link: NavigationLinks[i],
-        };
-      }
-    }
-    return (
-      <LinkButton onClick={() => setIsExpanded(true)}>
-        <PathLink
-          key={`link-${Title.index}-${Title.Title}`}
-          className="nav-link link title-link"
-          to={Title.Link.Path}
-        >
-          {Title.Title}
-        </PathLink>
-      </LinkButton>
-    );
-  };
-
   const NavigationMapper = () => {
     return (
       <NavigationContainer className="navigation-container">
-        {isWideScreen ? CreateLinkButtons() : CreateDropDown()}
+        {isWideScreen ? CreateLinkButtons() : DropDown()}
       </NavigationContainer>
     );
   };
 
+  // Uncondensed link buttons
   const CreateLinkButtons = () => {
     return NavigationLinks.map((link, index) => (
       <LinkButton key={`button-${index}-${link.Title}`}>
@@ -67,15 +48,16 @@ const NavigationBar = () => {
     ));
   };
 
-  const CreateDropDown = () => {
-    return isExpanded ? Drop() : GetLinkTitle();
+  // Drop down menu
+  const DropDown = () => {
+    return isExpanded ? Drop() : GetPathButton();
   };
 
   const Drop = () => {
-    return <DropDownContainer>{GetPathButtons()}</DropDownContainer>;
+    return <DropDownContainer>{GetDropDownButtons()}</DropDownContainer>;
   };
 
-  const GetPathButtons = () => {
+  const GetDropDownButtons = () => {
     return NavigationLinks.map((link, index) => {
       return (
         <DropDownButton
@@ -106,9 +88,37 @@ const NavigationBar = () => {
     });
   };
 
+  const GetPathButton = () => {
+    let Title = {};
+    for (let i = 0; i < NavigationLinks.length; i++) {
+      if (NavigationLinks[i].Path === currentLocation) {
+        Title = {
+          Title: NavigationLinks[i].Title,
+          index: i,
+          Link: NavigationLinks[i],
+        };
+      }
+    }
+
+    return (
+      <LinkButton onClick={() => setIsExpanded(true)}>
+        <PathLink
+          key={`link-${Title.index}-${Title.Title}`}
+          className="nav-link link title-link"
+          to={Title.Link.Path}
+        >
+          {Title.Title}
+        </PathLink>
+      </LinkButton>
+    );
+  };
+
   return NavigationMapper();
 };
 
+/* 
+  Styled Components
+*/
 const NavigationContainer = styled.div`
   display: flex;
   flex-direction: row;
