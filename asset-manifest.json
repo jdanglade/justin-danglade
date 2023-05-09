@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/justin-danglade/static/css/main.5251ab38.css",
-    "main.js": "/justin-danglade/static/js/main.fa397112.js",
+    "main.js": "/justin-danglade/static/js/main.39c9d55a.js",
     "static/js/399.743371ee.chunk.js": "/justin-danglade/static/js/399.743371ee.chunk.js",
     "static/js/722.17131e04.chunk.js": "/justin-danglade/static/js/722.17131e04.chunk.js",
     "static/js/825.31897e06.chunk.js": "/justin-danglade/static/js/825.31897e06.chunk.js",
-    "static/js/881.fd45946e.chunk.js": "/justin-danglade/static/js/881.fd45946e.chunk.js",
+    "static/js/881.b174bcf2.chunk.js": "/justin-danglade/static/js/881.b174bcf2.chunk.js",
     "static/js/87.2470d7b1.chunk.js": "/justin-danglade/static/js/87.2470d7b1.chunk.js",
     "index.html": "/justin-danglade/index.html",
     "main.5251ab38.css.map": "/justin-danglade/static/css/main.5251ab38.css.map",
-    "main.fa397112.js.map": "/justin-danglade/static/js/main.fa397112.js.map",
+    "main.39c9d55a.js.map": "/justin-danglade/static/js/main.39c9d55a.js.map",
     "399.743371ee.chunk.js.map": "/justin-danglade/static/js/399.743371ee.chunk.js.map",
     "722.17131e04.chunk.js.map": "/justin-danglade/static/js/722.17131e04.chunk.js.map",
     "825.31897e06.chunk.js.map": "/justin-danglade/static/js/825.31897e06.chunk.js.map",
-    "881.fd45946e.chunk.js.map": "/justin-danglade/static/js/881.fd45946e.chunk.js.map",
+    "881.b174bcf2.chunk.js.map": "/justin-danglade/static/js/881.b174bcf2.chunk.js.map",
     "87.2470d7b1.chunk.js.map": "/justin-danglade/static/js/87.2470d7b1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5251ab38.css",
-    "static/js/main.fa397112.js"
+    "static/js/main.39c9d55a.js"
   ]
 }
