@@ -1,19 +1,22 @@
 import "./App.css";
-import React from "react";
+import React, { Suspense, lazy, startTransition } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import Homepage from "./Pages/Homepage";
-import Resume from "./Pages/Resume";
-import Photos from "./Pages/Photos";
+
+const Homepage = lazy(() => import("./Pages/Homepage"));
+const Resume = lazy(() => import("./Pages/Resume"));
+const Photos = lazy(() => import("./Pages/Photos"));
 
 function App() {
   return (
     <div className="App">
       <Router basename="">
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/Resume" element={<Resume />} />
-          <Route path="/Photos" element={<Photos />} />
-        </Routes>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/Resume" element={<Resume />} />
+            <Route path="/Photos" element={<Photos />} />
+          </Routes>
+        </Suspense>
       </Router>
     </div>
   );
