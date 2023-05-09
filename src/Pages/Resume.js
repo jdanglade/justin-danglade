@@ -1,4 +1,4 @@
-import React, { useState, createContext, useContext } from "react";
+import React from "react";
 import styled from "styled-components";
 import { ResumeData } from "../Assets/data";
 import NavigationBar, { LinkButton } from "../Components/NavigationBar";

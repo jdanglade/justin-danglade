@@ -1,4 +1,4 @@
-import React, { useState, createContext, useContext } from "react";
+import React from "react";
 import NavigationBar from "../Components/NavigationBar";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { PhotographyData } from "../Assets/data";

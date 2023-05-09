@@ -6,115 +6,107 @@ import useWindowSize from "../Utils/useWindowSize";
 
 const NavigationBar = () => {
   const isWideScreen = useWindowSize().isWideScreen;
-  return (
-    <NavigationContainer className="navigation-container">
-      <NavigationMapper
-        className="navigation-mapper"
-        isWideScreen={isWideScreen}
-      />
-    </NavigationContainer>
-  );
-};
-
-const NavigationMapper = (props) => {
-  return props.isWideScreen ? <CreateLinkButtons /> : <DropDown />;
-};
-
-const DropDown = () => {
   const [isExpanded, setIsExpanded] = useState(false);
-  return isExpanded ? (
-    drop()
-  ) : (
-    <LinkButton onClick={() => setIsExpanded(true)}>
-      <GetTitleLink />
-    </LinkButton>
-  );
-
-  function drop() {
-    return (
-      <DropDownContainer>
-        {NavigationLinks.map((link, index) => {
-          return (
-            <>
-              <DropDownButton key={`button-${index}-${link.Title}`}>
-                {link.LinkType === "anchor" ? (
-                  <PathAnchor
-                    key={`anchor-${link.Title}`}
-                    className="nav-link anchor"
-                    href={link.Path}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {link.Title}
-                  </PathAnchor>
-                ) : (
-                  <PathLink
-                    key={`link-${index}-${link.Title}`}
-                    className="nav-link link"
-                    to={link.Path}
-                  >
-                    {link.Title}
-                  </PathLink>
-                )}
-              </DropDownButton>
-            </>
-          );
-        })}
-      </DropDownContainer>
-    );
-  }
-};
-
-const GetTitleLink = () => {
   const currentLocation = useLocation().pathname;
-  let Title = getTitle();
-  return (
-    <PathLink
-      key={`link-${Title.index}-${Title.Title}`}
-      className="nav-link link title-link"
-      to={Title.Link.Path}
-    >
-      {Title.Title}
-    </PathLink>
-  );
 
-  function getTitle() {
+  const GetLinkTitle = () => {
+    let Title = {};
     for (let i = 0; i < NavigationLinks.length; i++) {
       if (NavigationLinks[i].Path === currentLocation) {
-        return {
+        Title = {
           Title: NavigationLinks[i].Title,
           index: i,
           Link: NavigationLinks[i],
         };
       }
     }
-  }
-};
-
-const CreateLinkButtons = () => {
-  return NavigationLinks.map((link, index) => (
-    <LinkButton key={`button-${index}-${link.Title}`}>
-      {link.LinkType === "anchor" ? (
-        <PathAnchor
-          key={`anchor-${link.Title}`}
-          className="nav-link anchor"
-          href={link.Path}
-          target="_blank"
-          rel="noreferrer"
-        >
-          {link.Title}
-        </PathAnchor>
-      ) : (
+    return (
+      <LinkButton onClick={() => setIsExpanded(true)}>
         <PathLink
-          key={`link-${index}-${link.Title}`}
-          className="nav-link link"
-          to={link.Path}
+          key={`link-${Title.index}-${Title.Title}`}
+          className="nav-link link title-link"
+          to={Title.Link.Path}
         >
-          {link.Title}
+          {Title.Title}
         </PathLink>
-      )}
-    </LinkButton>
-  ));
+      </LinkButton>
+    );
+  };
+
+  const NavigationMapper = () => {
+    return (
+      <NavigationContainer className="navigation-container">
+        {isWideScreen ? CreateLinkButtons() : CreateDropDown()}
+      </NavigationContainer>
+    );
+  };
+
+  const CreateLinkButtons = () => {
+    return NavigationLinks.map((link, index) => (
+      <LinkButton key={`button-${index}-${link.Title}`}>
+        {link.LinkType === "anchor" ? (
+          <PathAnchor
+            key={`anchor-${link.Title}`}
+            className="nav-link anchor"
+            href={link.Path}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {link.Title}
+          </PathAnchor>
+        ) : (
+          <PathLink
+            key={`link-${index}-${link.Title}`}
+            className="nav-link link"
+            to={link.Path}
+          >
+            {link.Title}
+          </PathLink>
+        )}
+      </LinkButton>
+    ));
+  };
+
+  const CreateDropDown = () => {
+    return isExpanded ? Drop() : GetLinkTitle();
+  };
+
+  const Drop = () => {
+    return <DropDownContainer>{GetPathButtons()}</DropDownContainer>;
+  };
+
+  const GetPathButtons = () => {
+    return NavigationLinks.map((link, index) => {
+      return (
+        <DropDownButton
+          key={`button-${index}-${link.Title}`}
+          onClick={() => setIsExpanded(false)}
+        >
+          {link.LinkType === "anchor" ? (
+            <PathAnchor
+              key={`anchor-${index}-${link.Title}`}
+              className="nav-link anchor"
+              href={link.Path}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {link.Title}
+            </PathAnchor>
+          ) : (
+            <PathLink
+              key={`link-${index}-${link.Title}`}
+              className="nav-link link"
+              to={link.Path}
+            >
+              {link.Title}
+            </PathLink>
+          )}
+        </DropDownButton>
+      );
+    });
+  };
+
+  return NavigationMapper();
 };
 
 const NavigationContainer = styled.div`
@@ -146,7 +138,7 @@ const PathAnchor = styled.a`
   padding: 2vmax;
 `;
 
-export const DropDownContainer = styled.div``;
+const DropDownContainer = styled.div``;
 
 export const LinkButton = styled.button`
   display: flex;
