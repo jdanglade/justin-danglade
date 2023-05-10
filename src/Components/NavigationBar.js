@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Link, useLocation } from "react-router-dom";
 import { NavigationLinks } from "../Assets/data";
@@ -12,6 +12,10 @@ const NavigationBar = () => {
   const isWideScreen = useWindowSize().isWideScreen;
   const [isExpanded, setIsExpanded] = useState(false);
   const currentLocation = useLocation().pathname;
+
+  useEffect(() => {
+    setIsExpanded(false);
+  }, [isWideScreen]);
 
   const NavigationMapper = () => {
     return (
@@ -148,11 +152,17 @@ const PathAnchor = styled.a`
   padding: 2vmax;
 `;
 
-const DropDownContainer = styled.div``;
-
-export const LinkButton = styled.button`
+const DropDownContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+const DropDownButton = styled.button`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 600;
@@ -188,11 +198,9 @@ export const LinkButton = styled.button`
   }
 `;
 
-export const DropDownButton = styled.button`
+export const LinkButton = styled.button`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
   font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 600;
