@@ -108,7 +108,7 @@ const NavigationBar = () => {
       <LinkButton onClick={() => setIsExpanded(true)}>
         <PathLink
           key={`link-${Title.index}-${Title.Title}`}
-          className="nav-link link title-link"
+          className="nav-link link path-link"
           to={Title.Link.Path}
         >
           {Title.Title}
