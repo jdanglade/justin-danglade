@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/justin-danglade/static/css/main.5251ab38.css",
-    "main.js": "/justin-danglade/static/js/main.220bc05a.js",
-    "static/js/399.a5034a35.chunk.js": "/justin-danglade/static/js/399.a5034a35.chunk.js",
-    "static/js/722.2727abf9.chunk.js": "/justin-danglade/static/js/722.2727abf9.chunk.js",
-    "static/js/825.f70ad541.chunk.js": "/justin-danglade/static/js/825.f70ad541.chunk.js",
+    "main.css": "/justin-danglade/static/css/main.dad0428a.css",
+    "main.js": "/justin-danglade/static/js/main.ee576f6b.js",
+    "static/js/399.2c4145c5.chunk.js": "/justin-danglade/static/js/399.2c4145c5.chunk.js",
+    "static/js/722.5c0557f3.chunk.js": "/justin-danglade/static/js/722.5c0557f3.chunk.js",
+    "static/js/825.ff65d583.chunk.js": "/justin-danglade/static/js/825.ff65d583.chunk.js",
     "static/js/881.b174bcf2.chunk.js": "/justin-danglade/static/js/881.b174bcf2.chunk.js",
     "static/js/87.2470d7b1.chunk.js": "/justin-danglade/static/js/87.2470d7b1.chunk.js",
     "index.html": "/justin-danglade/index.html",
-    "main.5251ab38.css.map": "/justin-danglade/static/css/main.5251ab38.css.map",
-    "main.220bc05a.js.map": "/justin-danglade/static/js/main.220bc05a.js.map",
-    "399.a5034a35.chunk.js.map": "/justin-danglade/static/js/399.a5034a35.chunk.js.map",
-    "722.2727abf9.chunk.js.map": "/justin-danglade/static/js/722.2727abf9.chunk.js.map",
-    "825.f70ad541.chunk.js.map": "/justin-danglade/static/js/825.f70ad541.chunk.js.map",
+    "main.dad0428a.css.map": "/justin-danglade/static/css/main.dad0428a.css.map",
+    "main.ee576f6b.js.map": "/justin-danglade/static/js/main.ee576f6b.js.map",
+    "399.2c4145c5.chunk.js.map": "/justin-danglade/static/js/399.2c4145c5.chunk.js.map",
+    "722.5c0557f3.chunk.js.map": "/justin-danglade/static/js/722.5c0557f3.chunk.js.map",
+    "825.ff65d583.chunk.js.map": "/justin-danglade/static/js/825.ff65d583.chunk.js.map",
     "881.b174bcf2.chunk.js.map": "/justin-danglade/static/js/881.b174bcf2.chunk.js.map",
     "87.2470d7b1.chunk.js.map": "/justin-danglade/static/js/87.2470d7b1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5251ab38.css",
-    "static/js/main.220bc05a.js"
+    "static/css/main.dad0428a.css",
+    "static/js/main.ee576f6b.js"
   ]
 }
