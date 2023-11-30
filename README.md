@@ -17,9 +17,9 @@ To run this website locally, follow these steps:
 
 ### Pages
 
--Home
--Resume
--Photography
+  Home
+  Resume
+  Photography
 
 ### Technologies Used
 
