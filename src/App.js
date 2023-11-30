@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { Suspense, lazy, startTransition } from "react";
+import React, { Suspense, lazy } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 const Homepage = lazy(() => import("./Pages/Homepage"));

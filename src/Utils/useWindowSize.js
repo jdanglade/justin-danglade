@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import { Devices } from "../Assets/data";
 
 // mobileS: "320px",
@@ -12,7 +12,7 @@ import { Devices } from "../Assets/data";
 export default function useWindowSize() {
   const isSSR = typeof window !== "undefined";
 
-  const [windowSize, setWindowSize] = React.useState({
+  const [windowSize, setWindowSize] = useState({
     width: isSSR ? 1200 : window.innerWidth,
     height: isSSR ? 800 : window.innerHeight,
     isWideScreen: window.innerWidth >= parseInt(Devices.tablet),
@@ -64,7 +64,7 @@ export default function useWindowSize() {
     });
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener("resize", changeWindowSize);
 
     return () => {
