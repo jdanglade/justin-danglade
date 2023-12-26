@@ -1,7 +1,7 @@
 {
   "name": "justin-danglade",
   "homepage": "https://jdanglade.github.io/justin-danglade/",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
     "@coreui/coreui": "^4.2.6",
