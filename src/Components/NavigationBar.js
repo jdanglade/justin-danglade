@@ -133,16 +133,6 @@ const NavigationContainer = styled.div`
   color: #ffffff;
 `;
 
-const NavigationTitle = styled.h2`
-  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-weight: 600;
-  font-size: 2vmax;
-  line-height: normal;
-  border: none;
-  color: #ffffff;
-`;
-
 const PathLink = styled(Link)`
   color: #ffffff;
 `;
