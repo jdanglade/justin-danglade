@@ -13,7 +13,7 @@ To run this website locally, follow these steps:
 2. Navigate to the project directory - "cd justin-danglade"
 3. Install dependencies - "npm install"
 4. Start the development server - "npm start"
-5. Open your browser and go to - "http://localhost::3000"
+5. Open your browser and go to - "http://localhost:3000"
 
 ### Pages
 
