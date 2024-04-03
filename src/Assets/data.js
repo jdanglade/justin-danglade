@@ -21,7 +21,7 @@ export const HomepageData = {
     ProfilePic: {
       alt: "Justin Danglade",
       cdnLocation:
-        "https://ucarecdn.com/7b548fbc-5b4c-449b-a6c9-5b6753a7f6ac/-/preview/-/quality/smart/",
+        "https://ucarecdn.com/43ef937c-70c9-4c57-b746-020b2771a616/-/preview/-/quality/smart/",
     },
     Text: "I'm an entry level software developer, casual photographer, music lover, and looking for a job.",
   },
