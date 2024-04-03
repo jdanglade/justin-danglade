@@ -45,14 +45,14 @@ const DisplaySchools = () => {
             <SchoolName className="homepage-school-name">
               {School.Name}
             </SchoolName>
-            <SchoolDescription className="homepage-school-description">
-              {School.Description}
-            </SchoolDescription>
             <SchoolPicture
               className="lazy-pic"
               alt={School.Photo.alt}
               src={School.Photo.cdnLocation}
             />
+            <SchoolDescription className="homepage-school-description">
+              {School.Description}
+            </SchoolDescription>
           </div>
         );
       })}
@@ -90,7 +90,7 @@ const EducationContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 10vmin;
+  padding: 2vmin;
 `;
 
 const SchoolsContainer = styled.div`
@@ -99,7 +99,7 @@ const SchoolsContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 1vmin;
-  margin: 0 0 5vmin 0;
+  margin: 0;
 `;
 
 const SchoolName = styled.h1`
