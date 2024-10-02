@@ -4,6 +4,7 @@ Welcome to the repository for my personal website! This site is built using the 
 allowing for a dynamic and interactive user experience. Below, you'll find information about the
 local installation process as well as the structure and technologies used in the development of
 this site.
+https://jdanglade.github.io/justin-danglade/
 
 ## Installation
 
