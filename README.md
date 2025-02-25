@@ -4,6 +4,7 @@ Welcome to the repository for my personal website! This site is built using the 
 allowing for a dynamic and interactive user experience. Below, you'll find information about the
 local installation process as well as the structure and technologies used in the development of
 this site.
+https://jdanglade.github.io/justin-danglade/
 
 ## Installation
 
@@ -13,7 +14,7 @@ To run this website locally, follow these steps:
 2. Navigate to the project directory - "cd justin-danglade"
 3. Install dependencies - "npm install"
 4. Start the development server - "npm start"
-5. Open your browser and go to - "http://localhost::3000"
+5. Open your browser and go to - "http://localhost:3000"
 
 ### Pages
 
