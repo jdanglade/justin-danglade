@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Link, useLocation } from "react-router-dom";
 import { NavigationLinks } from "../Assets/data";
 import useWindowSize from "../Utils/useWindowSize";
+import DownArrow from "../Assets/down-arrow.svg";
 
 /* 
     Returns a responsive navigation bar that condenses into a 
@@ -113,6 +114,13 @@ const NavigationBar = () => {
         >
           {Title.Title}
         </PathLink>
+        <img
+          alt="Down Arrow"
+          src={DownArrow}
+          width="25"
+          height="25"
+          style={{ padding: "25px" }}
+        />
       </LinkButton>
     );
   };

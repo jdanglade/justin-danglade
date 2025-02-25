@@ -74,7 +74,7 @@ const IntroTitle = styled.h1`
 `;
 
 const ProfilePicture = styled(LazyLoadImage)`
-  width: 35vmax;
+  width: 35vmin;
   height: auto;
   margin: 1vmin;
 `;
